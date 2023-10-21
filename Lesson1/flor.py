@@ -59,7 +59,7 @@ for i in range(160 + 40):
 turtle.penup()
 turtle.goto(0, 100)  # Ajusta la posición vertical según sea necesario
 turtle.color("Red")  # Color del texto
-turtle.write("Te Quiero", align="center", font=("Arial", 24, "bold"))
+turtle.write("Neftali", align="center", font=("Arial", 24, "bold"))
 
 # Oculta el cursor de la tortuga antes de salir
 turtle.hideturtle()
