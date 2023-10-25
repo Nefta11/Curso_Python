@@ -30,5 +30,13 @@ print(f"El resultado de la division es: {div}")
 
 #Operador de division
 print("-------------------------------------")
+##Para que la division te la de en entero se pone doble //
+div2=operandoA//operandoB
+print(f"El resultado de la division (int) es: {div2}")
+
+#Operacion de modulo
+print("-------------------------------------")
+modulo= operandoA%operandoB
+print(f"Resultado residui de la division (modulo): {modulo}")
 
 
