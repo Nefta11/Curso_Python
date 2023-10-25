@@ -39,4 +39,8 @@ print("-------------------------------------")
 modulo= operandoA%operandoB
 print(f"Resultado residui de la division (modulo): {modulo}")
 
+#Operacion de exponente
+print("-------------------------------------")
+exponente=operandoA**operandoB
+print(f"Resultado exponente: {exponente}")
 
