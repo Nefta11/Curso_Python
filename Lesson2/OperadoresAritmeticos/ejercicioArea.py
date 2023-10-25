@@ -12,5 +12,6 @@ print(f"El valor del perimetro es: {perimetro}")
 print(f"El valor del área es: {area}")
 
 """
-La
+La Triple comilla nos perimite agregar comentarios 
+de multiples linea como se muestra aqui 
 """
