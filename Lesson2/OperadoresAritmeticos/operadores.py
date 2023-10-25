@@ -19,3 +19,16 @@ resta=operandoA-operandoB
 print(f"El resultado de la resta es: {resta} ")
 
 #Operador de muliplicación 
+print("-------------------------------------")
+mult=operandoB*operandoA
+print(f"Resultado de la multiplicacón: {mult}")
+
+#Operador de division
+print("-------------------------------------")
+div=operandoA/operandoB
+print(f"El resultado de la division es: {div}")
+
+#Operador de division
+print("-------------------------------------")
+
+
