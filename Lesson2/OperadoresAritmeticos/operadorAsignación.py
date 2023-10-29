@@ -19,4 +19,4 @@ print(f"Mi variable con decremento {miVariable}")
 
 #Mulriplicacion de mi varibale 
 miVariable*=2
-print(f"Mi varibale multiplicada por 2 {miVariable}")
+print(f"Mi varibale multiplicada por 2 {miVariable }")
