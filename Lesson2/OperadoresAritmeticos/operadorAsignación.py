@@ -13,6 +13,10 @@ print(miVariable)
 miVariable+=2
 print(f"Incremento con reasignación {miVariable}")
 
-#Restar un valor a mi variable
+#Restar un valor a mi variable esto es equivales a miVariable - 2
 miVariable-=5
 print(f"Mi variable con decremento {miVariable}")
+
+#Mulriplicacion de mi varibale 
+miVariable*=2
+print(f"Mi varibale multiplicada por 2 {miVariable}")
