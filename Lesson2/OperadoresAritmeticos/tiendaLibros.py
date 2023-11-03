@@ -18,8 +18,8 @@ else:
 
 ##Utilizamo triple comilla simple para concatenar varias cadenas y variables 
 print("------------------------------------------------")
-print(f'''Nombre:{name},
-ID: {id},
-Precio: {price},
-Envio Gratuito: {send}''')
+print(f'''Nombre:{name}
+ID: {id}
+Precio: {price}
+Envio Gratuito?: {send}''')
 print("-----------------------------------------------")
