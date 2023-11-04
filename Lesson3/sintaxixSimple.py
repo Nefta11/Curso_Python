@@ -1,5 +1,6 @@
 #Sintaxis simplificada con el operador ternario
 #Solo se recomienda para codigos muy pequeños 
+#Y no se puede utilizar elif aqui
 condicion = False 
 
 #if condicion:
