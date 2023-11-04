@@ -1,10 +1,14 @@
 numero= int(input("Proporciona un valor entre 1 y 3:"))
 
+numeroT=""
+
 if numero == 1:
-    print("Numero 1")
+    numeroT = "Número uno"
 elif numero == 2:
-    print("Numero 2")
-elif numero == 3:
-    print("Numero 3")
+    numeroT = "Número dos"
+elif numeroT == 3:
+    numeroT = "Número tres"
 else:
     print("Numero fuera de rango bobito")
+
+print(f"Numero proporcionado: {numero} - {numeroT}")
