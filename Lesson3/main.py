@@ -1,6 +1,6 @@
 #Aqui comenzamos a ver las sentencia if/else
 
-condicion= True
+condicion= False
 
 if condicion:
     print('condición verdadera')
