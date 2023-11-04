@@ -23,4 +23,3 @@ elif month == 12 or month== 1 or month== 2:
 else:
     print("Valor no valido Bro")
 
-    
