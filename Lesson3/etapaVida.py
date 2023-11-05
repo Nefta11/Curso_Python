@@ -12,3 +12,6 @@ elif 20 <= edad < 30:
 else:
     print("Etapa de vida no reconocida Bobito")
 
+
+    
+
