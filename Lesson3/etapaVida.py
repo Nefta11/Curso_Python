@@ -11,7 +11,3 @@ elif 20 <= edad < 30:
     print(f"Tu edad es de {edad} \nAmor y comienza el trabajo...")
 else:
     print("Etapa de vida no reconocida Bobito")
-
-
-    
-
