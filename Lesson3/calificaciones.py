@@ -1,6 +1,6 @@
 #Ejercicio de calificaciones
 print("Programa que determina como te fue de B a F dependiendo tu calificación")
-calif=int(input("Ingresa tu calificación 0-10"))
+calif=int(input("Ingresa tu calificación (0-10): "))
 
 if (9<=calif<=10):
     print("A")
