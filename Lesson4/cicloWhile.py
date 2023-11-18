@@ -7,3 +7,11 @@
 #    print("Fin ciclo while")
 
 
+contador = 0
+
+while contador<3:
+    print("Contador")
+    contador+=1 #El valor de contador lo estamos incrementando 1
+else:
+    print("Fin ciclo while")
+
