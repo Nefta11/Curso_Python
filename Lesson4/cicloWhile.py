@@ -7,7 +7,7 @@
 #    print("Fin ciclo while")
 
 
-contador = 0
+contador = -2
 
 while contador<3:
     print(contador)
