@@ -9,3 +9,5 @@ for i in range(6):
     if i%2 !=0:
         continue  #Ejecuta la siguiente iteración y ya no ejecuta ninguna de las siguientes.
     print(f"Valor : {i}")
+
+    
