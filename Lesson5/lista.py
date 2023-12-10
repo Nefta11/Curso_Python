@@ -7,3 +7,5 @@ print(nombres)
 #Accedere a los elementos de manera individual
 print(nombres[0])
 print(nombres[3])
+
+#Acceder a los elementos de manera inversa
