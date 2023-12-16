@@ -10,3 +10,7 @@ print(nombre[:3])
 
 #Desde el indice indicado hasta el final
 print(nombre[1:])
+
+#Cambiar un valor 
+nombre[3]="Avryl"
+print(nombre)
