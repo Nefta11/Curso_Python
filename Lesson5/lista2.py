@@ -7,3 +7,4 @@ print(nombre[0:2]) #En este ejemplo mostramos como recuperamos e imprimimos un r
 
 #Ir del inicio de la lista al indice (sin incluirlo )
 print(nombre[:3])
+
