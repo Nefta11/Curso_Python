@@ -2,6 +2,7 @@
 nombres=["Belliham","Rodri","Benzema","Cristiano"]    
 
 print(len(nombres))
+print(nombres)
 
 #Agregar un elemento
 nombres.append("Chicharo")#append es una funcion que ya vine cargada en python y nos sirve para agregar un nuevo elemento a la lista
