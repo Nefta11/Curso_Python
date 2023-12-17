@@ -7,4 +7,17 @@
 frutas = ("Naranja","Platano","Mandarina")
 
 #Saber la cantidades de elemento que tiene nuestra tupla
+print(frutas)
 print(len(frutas))
+#Accedet a un elemento
+print(frutas[0])
+
+#Navegacion inversa
+print(frutas[-1])#Para acceder a los indices si utilizamos corchetes
+
+#Acceder a un rango
+print(frutas[0:1])
+
+#En las tuplas cuando solo tenemos un elemento al final se tiene que poner una coma
+#Po que si no seria como un simple string
+#Ejemplo ('Naranja',)<- de esa manera
