@@ -18,3 +18,15 @@ print(nombres)
 #Remover el último valor agregado Elimina el ultimo elemento de la lista
 nombres.pop()
 print(nombres)
+
+#Eliminar un indice x que nosotros queramos
+del nombres[0]
+print(nombres)
+
+#Limpiar la lista
+nombres.clear()
+print(nombres)
+
+#Borrar la lista por completo
+del nombres
+print(nombres)
