@@ -15,3 +15,9 @@ verdurasLista= list(verduras)#Con esta funcion se convierte nuestra tupla a list
 verdurasLista[0]="Zanahoria"
 verduras= tuple(verdurasLista) # Sirve para cambiarla a tupla nuevamente
 print("\n",verduras)
+
+
+#Eliminar la tupla por completo
+
+del verduras
+print(verduras)
