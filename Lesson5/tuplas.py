@@ -6,3 +6,5 @@
 #NO se utilian corchetes si no parentesis
 frutas = ("Naranja","Platano","Mandarina")
 
+#Saber la cantidades de elemento que tiene nuestra tupla
+print(len(frutas))
