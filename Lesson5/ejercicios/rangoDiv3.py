@@ -18,3 +18,4 @@ print("Rango con valores de inicio=3, fin=10, increento = 2")
 rango = range(3,11,2)
 for i in rango:
     print(i)
+    
