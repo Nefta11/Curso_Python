@@ -8,8 +8,5 @@ lista =[]
 for tupla in tuplas:
     if tupla <5:
         lista.append(tupla)
-
-
-
 #Imprimimos la lista
 print(lista)
