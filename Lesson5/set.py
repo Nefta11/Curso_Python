@@ -9,3 +9,13 @@
 #Se utilizan llaves
 planetas = {"Marte","Jupiter","Venus"}
 print(planetas)
+
+#largo de un SET
+print(len(planetas))
+
+#Revisar si un elemento esta presente
+print("Marte" in planetas)
+
+#Agregar elementos a nuestro SET
+planetas.add("Tierra")
+print(planetas)
