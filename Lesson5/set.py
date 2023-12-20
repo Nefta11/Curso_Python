@@ -25,7 +25,10 @@ planetas.add("Tierra")
 print(planetas)
 
 #Elimar un elemento dentro de SET
-planetas.remove("Tierra")
+planetas.remove("Tierra") #Posiblemente arroje un error si no se encuentra el elemento que se quiere eliminar
 print(planetas)
+planetas.discard("Júpiter") #ESTA FUNCION TAMBIEN ELEIMINA UN ELEMENTO DENTRO DE SET PERO NO ARROJA ERROR EN CASO DE QUE NO SE ENCUENTRE EL ELEMENTO COMO EL ANTERIOR
+print(planetas)
+
 
 
