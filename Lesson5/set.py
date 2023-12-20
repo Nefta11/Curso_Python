@@ -19,3 +19,7 @@ print("Marte" in planetas)
 #Agregar elementos a nuestro SET
 planetas.add("Tierra")
 print(planetas)
+
+#No se pueden duplicar elementos
+planetas.add("Tierra")
+print(planetas)
