@@ -23,3 +23,9 @@ print(planetas)
 #No se pueden duplicar elementos
 planetas.add("Tierra")
 print(planetas)
+
+#Elimar un elemento dentro de SET
+planetas.remove("Tierra")
+print(planetas)
+
+
