@@ -30,5 +30,13 @@ print(planetas)
 planetas.discard("Júpiter") #ESTA FUNCION TAMBIEN ELEIMINA UN ELEMENTO DENTRO DE SET PERO NO ARROJA ERROR EN CASO DE QUE NO SE ENCUENTRE EL ELEMENTO COMO EL ANTERIOR
 print(planetas)
 
+#Limpiar SET
+planetas.clear()
+print(planetas)
+
+#Elimianr por completo nuestro SET
+del planetas
+print(planetas)
+
 
 
