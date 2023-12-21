@@ -23,6 +23,12 @@ print(diccionario)
 
 #Recorrer los elementos 
 
-for termino, valor in diccionario.items():
+for termino, valor in diccionario.items():#Con la funcion items nos permite recuperar key y value en un recorrido con for
     print(termino, valor)
+
+for termino in diccionario.keys():#Con esta funcion recuperamos solamente la llave
+    print(termino)
+
+for valor in diccionario.values():#Con esta funcion solo imprimimos el valor de nuestra llave
+    print(valor)
 
