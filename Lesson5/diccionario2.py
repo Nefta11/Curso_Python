@@ -32,5 +32,8 @@ print(diccionario)
 
 #Limpiar
 diccionario.clear()
+print(diccionario)
 
+#Eliminar diccionario
+del diccionario
 print(diccionario)
