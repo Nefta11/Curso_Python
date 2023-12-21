@@ -32,3 +32,5 @@ for termino in diccionario.keys():#Con esta funcion recuperamos solamente la lla
 for valor in diccionario.values():#Con esta funcion solo imprimimos el valor de nuestra llave
     print(valor)
 
+#Comprobar existencia de algun elementos
+    print('IDE' in diccionario)
