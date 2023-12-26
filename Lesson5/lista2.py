@@ -17,7 +17,9 @@ print(f"Sustituyendo el elemendo en el indice 3",nombres)
 
 #Iterar una lista
 for nombre in nombres:
+
+    
     print(nombre)
 else:
-    
+
     print("No existen mas valores en la lista")
