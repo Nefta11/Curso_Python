@@ -14,8 +14,6 @@ print(nombres[1:])
 #Cambiar un valor 
 nombres[3]="Avryl"
 print(f"Sustituyendo el elemendo en el indice 3",nombres)
-
-
 #Iterar una lista
 for nombre in nombres:
     print(nombre)
