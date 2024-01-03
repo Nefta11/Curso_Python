@@ -8,7 +8,6 @@ diccionario = {
 }
 
 print(diccionario)
-
 #Largo de elementos
 
 print(len(diccionario))
