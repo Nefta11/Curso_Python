@@ -10,9 +10,7 @@ diccionario = {
 print(diccionario)
 
 #Largo de elementos
-
 print(len(diccionario))
-
 #Acceder a un elemento con (key)
 print(diccionario['IDE'])
 
