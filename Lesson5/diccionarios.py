@@ -8,12 +8,14 @@ diccionario = {
 }
 
 print(diccionario)
+
 #Largo de elementos
 
 print(len(diccionario))
 
 #Acceder a un elemento con (key)
 print(diccionario['IDE'])
+
 #Otra forma de acceder un elemento
 print(diccionario.get('OOP'))
 #Modificar elementos 
