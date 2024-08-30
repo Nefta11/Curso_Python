@@ -1,0 +1,92 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+.eggs/
+*.egg
+dist/
+build/
+*.wheel
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+*.pkl
+
+# Media
+/media
+
+# Static files
+/static
+
+# Local Django settings
+/local_settings.py
+
+# Django migrations
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Secret keys
+secrets.json
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Pyre type checker
+.pyre/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Environments
+*.env
+*.venv
+.envrc
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Other
+*.DS_Store
+*.log
+*.pot
+*.mo
+*.swp
+*.swo
+Thumbs.db
