@@ -69,3 +69,7 @@ print("El resultado de la resta es :",b)
 print("El resultado de la Multi es :",c)
 print("El resultado de la Div es :",d)
 
+
+##Importacion de cosillas XD
+import keyword
+print(keyword.kwlist)
