@@ -71,5 +71,16 @@ print("El resultado de la Div es :",d)
 
 
 ##Importacion de cosillas XD
+'''
 import keyword
 print(keyword.kwlist)
+'''
+
+j= 23
+
+def function():
+    j=6
+    return(j)
+
+k= function()
+print("La variable de j que se imprimio es :",j)
