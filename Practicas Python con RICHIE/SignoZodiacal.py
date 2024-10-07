@@ -27,5 +27,5 @@ def SignoZodiacal (dia,mes):
         return "Piscis"
 
 
-signo = SignoZodiacal(23,11)
+signo = SignoZodiacal(15,12)
 print("Tu signo zodiacal es:",signo)
