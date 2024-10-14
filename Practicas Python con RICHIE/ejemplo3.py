@@ -1,11 +1,19 @@
 #Funciones
-
 llave = False
 
+def encender():
+     print ("colocar llave")
+     llave = True
+     if (llave):
+        print("carro encendido")
 
 def avanzar():
-    print ("avanzar, run, ruun")
-    
+     if (llave == True):
+        print ("avanzar, run, ruun")
+     else:
+        print ("No puedes avanzar, carro apagado")  
+
+
 def frenar():
     print ("frenar, parar, parkear")
 
@@ -15,11 +23,6 @@ def retroceder():
 def pitar():
      print ("pitar, gritar, gritar")  
 
-def encender():
-     print ("colocar llave")
-     llave= True
-     if (llave):
-        print("carro encendido")
 
 def apagar():
      print ("quitar llave")
@@ -33,5 +36,5 @@ def girarIzquierda():
 def girarDerecha():
      print ("girar a la derecha")
 
-###encender()
-apagar()
+encender()
+avanzar()
