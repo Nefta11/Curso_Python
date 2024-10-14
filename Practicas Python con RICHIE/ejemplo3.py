@@ -32,10 +32,22 @@ def apagar():
           print("carro apagado")
 
 def girarIzquierda():
+     girarI=True
      print ("girar a la izquierda")
+     return girarIzquierda
 
 def girarDerecha():
+     girarD=True
      print ("girar a la derecha")
+     return girarD
 
 ##encender()
 avanzar(True)
+retroceder()
+
+if(girarDerecha()): 
+     print ("No puedes girara a la izquierda")
+     girarI=False
+if(girarIzquierda()):
+     print ("No puedes girar a la derecha")
+     girarD=False
