@@ -6,9 +6,10 @@ def encender():
      llave = True
      if (llave):
         print("carro encendido")
+     return True
 
-def avanzar():
-     if (llave == True):
+def avanzar(llave):
+     if (encender()):
         print ("avanzar, run, ruun")
      else:
         print ("No puedes avanzar, carro apagado")  
@@ -36,5 +37,5 @@ def girarIzquierda():
 def girarDerecha():
      print ("girar a la derecha")
 
-encender()
-avanzar()
+##encender()
+avanzar(True)
