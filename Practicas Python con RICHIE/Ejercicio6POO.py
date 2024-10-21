@@ -10,3 +10,5 @@ su_perro = Perro("Firula","Bulldog")
 print(type(mi_perro))
 
 print(mi_perro.especie)
+print(su_perro.especie)
+print(Perro.especie)
