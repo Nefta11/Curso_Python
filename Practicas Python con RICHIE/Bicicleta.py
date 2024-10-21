@@ -3,13 +3,13 @@ class Bicicleta:
         print(f"Creando una bicicleta {tipo_sillon} de {num_rin} rin, {diam_rueda} de diámetro y {tipo_color} color")
 
     def frenar(self):
-        print("Frenando")
+        print("La bicicleta está frenando")
 
     def girar(self):
         print("La bicicleta está girando")
 
     def pedalear(self):
-        print("Pedaleando")
+        print("Se esta pedaleando")
 
 Baika = Bicicleta("Baika", "2", "26", "negro")
 
