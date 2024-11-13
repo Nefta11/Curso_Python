@@ -14,9 +14,9 @@ class MainWindow(QtWidgets.QDialog, Ui_Dialog):  # Cambia Ui_MainWindow por Ui_D
         Usuario = self.lineEdit.text()
         Contraseña = self.lineEdit_3.text()
         if Usuario == "Nefta" and Contraseña == "1234":
-            QtWidgets.QMessageBox.information(self, "Login Successful", "Welcome to the system")
+            QtWidgets.QMessageBox.information(self, "Sesion iniciada correctamente", "Bienvenido "+Usuario)
         else:
-            QtWidgets.QMessageBox.warning(self, "Login Failed", "Invalid credentials")
+            QtWidgets.QMessageBox.warning(self, "Logeo fallido", "Credenciales incorrectas")
 
     def cancelar(self):
         self.close()
