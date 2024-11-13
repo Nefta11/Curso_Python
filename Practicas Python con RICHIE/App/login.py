@@ -6,8 +6,16 @@ class MainWindow(QtWidgets.QDialog, Ui_Dialog):  # Cambia Ui_MainWindow por Ui_D
         super().__init__(*args, **kwargs)
         self.setupUi(self)
 
-        # Modifica el texto del label_3 como tenías en tu código original
-        self.label.setText("Hola Soy Neftali")
+        # Conecta el botón al método validar
+        self.pushButton.clicked.connect(self.validar)
+
+    def validar(self):
+        Usuario = self.lineEdit.text()
+        Contraseña = self.lineEdit_3.text()
+        if Usuario == "Administrador" and Contraseña == "123":
+            print("Welcome to the system")
+        else:
+            print("Invalid credentials")
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
