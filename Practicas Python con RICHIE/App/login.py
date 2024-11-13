@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from FormLog import Ui_Dialog  # Importa la clase generada con el nombre correcto
 
 class MainWindow(QtWidgets.QDialog, Ui_Dialog):  # Cambia Ui_MainWindow por Ui_Dialog
@@ -6,16 +6,20 @@ class MainWindow(QtWidgets.QDialog, Ui_Dialog):  # Cambia Ui_MainWindow por Ui_D
         super().__init__(*args, **kwargs)
         self.setupUi(self)
 
-        # Conecta el botón al método validar
+        # Conecta los botones a los métodos correspondientes
         self.pushButton.clicked.connect(self.validar)
+        self.pushButton_2.clicked.connect(self.cancelar)
 
     def validar(self):
         Usuario = self.lineEdit.text()
         Contraseña = self.lineEdit_3.text()
-        if Usuario == "Administrador" and Contraseña == "123":
-            print("Welcome to the system")
+        if Usuario == "Nefta" and Contraseña == "1234":
+            QtWidgets.QMessageBox.information(self, "Login Successful", "Welcome to the system")
         else:
-            print("Invalid credentials")
+            QtWidgets.QMessageBox.warning(self, "Login Failed", "Invalid credentials")
+
+    def cancelar(self):
+        self.close()
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
