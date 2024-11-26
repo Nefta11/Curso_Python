@@ -14,8 +14,8 @@ class MainWindow(QtWidgets.QDialog, Ui_Dialog):
         self.pushButton_2.clicked.connect(self.cancelar)
 
     def validar(self):
-        usuario = self.lineEdit.text()
-        contraseña = self.lineEdit_3.text()
+        usuario = self.txtUser.text()  # Cambiado a txtUser
+        contraseña = self.txtPassword.text()  # Cambiado a txtPassword
         if usuario == "admin" and contraseña == "1234":
             msgBox = QMessageBox()
             msgBox.setIcon(QMessageBox.Information)
