@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QMessageBox
 from FormLog import Ui_Dialog
 from Menu import Menu
 
+
 class MainWindow(QtWidgets.QDialog, Ui_Dialog):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -13,8 +14,8 @@ class MainWindow(QtWidgets.QDialog, Ui_Dialog):
         self.pushButton_2.clicked.connect(self.cancelar)
 
     def validar(self):
-        usuario = self.txtUser.text()
-        contraseña = self.txtPassword.text()
+        usuario = self.lineEdit.text()
+        contraseña = self.lineEdit_3.text()
         if usuario == "admin" and contraseña == "1234":
             msgBox = QMessageBox()
             msgBox.setIcon(QMessageBox.Information)
@@ -42,8 +43,10 @@ class MainWindow(QtWidgets.QDialog, Ui_Dialog):
         openwindow = Menu(self)
         openwindow.show()
 
+
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()
     window.show()
