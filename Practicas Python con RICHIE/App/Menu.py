@@ -1,23 +1,24 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
-from FormMenu import Ui_FormMenu  # Cambiado a Ui_FormMenu
+from FormMenu import Ui_FormMenu
 
-class Menu(QtWidgets.QDialog, Ui_FormMenu):  # Cambiado a Ui_FormMenu
+from Encriptar import *
+from Desencriptar import *
+
+class Menu(QtWidgets.QMainWindow):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
 
-    def show_message(self, message):
-        msgBox = QMessageBox()
-        msgBox.setIcon(QMessageBox.Information)
-        msgBox.setText(message)
-        msgBox.setWindowTitle("Información")
-        msgBox.setStandardButtons(QMessageBox.Ok)
-        msgBox.exec_()
+        self.pushButton.clicked.connect(self.openEncriptar)
+        self.pushButton2.clicked.connect(self.openDesencriptar)
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    window = Menu()
-    window.show()
-    sys.exit(app.exec_())
+        self.menuEncriptar.addAction("Encriptar", self.openEncriptar) 
+
+    def openEncriptar(self):
+        openwwindow = Encriptar(self)
+        openwwindow.show()
+    
+    def openDesencriptar(self):
+        openwwindow = Desencriptar(self)
+        openwwindow.show()

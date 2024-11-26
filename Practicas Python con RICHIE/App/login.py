@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QMessageBox
-from FormLog import Ui_Dialog  # Asegúrate de que FormLog.py contiene la clase Ui_Dialog
+from FormLog import Ui_Dialog
 from Menu import Menu
 
 class MainWindow(QtWidgets.QDialog, Ui_Dialog):
