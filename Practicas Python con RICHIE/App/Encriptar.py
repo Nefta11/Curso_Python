@@ -9,10 +9,12 @@ class Encriptar(QtWidgets.QMainWindow, Ui_SistemaEncriptar):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
 
+        # Conectar los botones de la primera pestaña a sus funciones correspondientes
         self.Encriptar_6.clicked.connect(self.encriptarAES)
         self.Encriptar_5.clicked.connect(self.limpiarCampos)
         self.Encriptar_3.clicked.connect(self.cargarArchivo)
-        self.Encriptar_4.clicked.connect(self.guardarArchivo)  
+        self.Encriptar_4.clicked.connect(self.guardarArchivo)
+        self.Encriptar_7.clicked.connect(self.enviarMensaje)
 
     def encriptarAES(self):
         data = self.textEdit.toPlainText()
@@ -69,9 +71,18 @@ class Encriptar(QtWidgets.QMainWindow, Ui_SistemaEncriptar):
             except Exception as e:
                 self.mensajeEncriptado.setText(f"Error al guardar el archivo: {e}")
 
+    def enviarMensaje(self):
+        # Aquí puedes agregar la funcionalidad para enviar el mensaje encriptado
+        texto_encriptado = self.mensajeEncriptado.text()
+        if texto_encriptado:
+            # Lógica para enviar el mensaje encriptado
+            pass
+        else:
+            self.mensajeEncriptado.setText("No hay texto encriptado para enviar.")
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    window = Encriptar()
-    window.show()
+    SistemaEncriptar = Encriptar()
+    SistemaEncriptar.show()
     sys.exit(app.exec_())
