@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="icon">
@@ -40,7 +40,7 @@
        <rect>
         <x>20</x>
         <y>0</y>
-        <width>91</width>
+        <width>121</width>
         <height>31</height>
        </rect>
       </property>
@@ -104,16 +104,6 @@
       <property name="icon">
        <iconset>
         <normaloff>images/cargar.png</normaloff>images/cargar.png</iconset>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>40</y>
-        <width>571</width>
-        <height>351</height>
-       </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="Encriptar_4">
@@ -222,6 +212,16 @@
         <normaloff>images/enviar.png</normaloff>images/enviar.png</iconset>
       </property>
      </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>581</width>
+        <height>361</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -232,7 +232,7 @@
        <rect>
         <x>30</x>
         <y>10</y>
-        <width>91</width>
+        <width>111</width>
         <height>31</height>
        </rect>
       </property>
@@ -246,16 +246,6 @@
       </property>
       <property name="text">
        <string>Imagen:</string>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="textEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>571</width>
-        <height>551</height>
-       </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="Encriptar_8">
@@ -381,6 +371,16 @@
       <property name="icon">
        <iconset>
         <normaloff>images/enviar.png</normaloff>images/enviar.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>581</width>
+        <height>501</height>
+       </rect>
       </property>
      </widget>
     </widget>
