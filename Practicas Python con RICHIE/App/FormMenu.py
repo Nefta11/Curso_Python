@@ -19,9 +19,15 @@ class Ui_FormMenu(object):
         self.label_welcome.setAlignment(QtCore.Qt.AlignCenter)
         self.label_welcome.setObjectName("label_welcome")
 
+        # Añadir espacio para la imagen
+        self.label_image = QtWidgets.QLabel(self.centralwidget)
+        self.label_image.setGeometry(QtCore.QRect(200, 110, 400, 200))
+        self.label_image.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_image.setObjectName("label_image")
+
         # Añadir etiqueta de pregunta
         self.label_question = QtWidgets.QLabel(self.centralwidget)
-        self.label_question.setGeometry(QtCore.QRect(200, 150, 400, 50))
+        self.label_question.setGeometry(QtCore.QRect(200, 320, 400, 50))
         font.setPointSize(16)
         self.label_question.setFont(font)
         self.label_question.setAlignment(QtCore.Qt.AlignCenter)
@@ -55,11 +61,15 @@ class Ui_FormMenu(object):
         _translate = QtCore.QCoreApplication.translate
         FormMenu.setWindowTitle(_translate("FormMenu", "MainWindow"))
         self.label_welcome.setText(_translate("FormMenu", "Bienvenido al sistema SIUU"))
+        self.label_image.setText(_translate("FormMenu", ""))  # Aquí puedes añadir un texto o dejarlo vacío para la imagen
         self.label_question.setText(_translate("FormMenu", "¿Qué desea realizar, amigazo?"))
         self.menuEncryptFile.setTitle(_translate("FormMenu", "Encriptar Archivo"))
         self.menuDecrypt.setTitle(_translate("FormMenu", "Desencriptar"))
         self.menuHelp.setTitle(_translate("FormMenu", "Ayuda"))
         self.menuExit.setTitle(_translate("FormMenu", "Salir"))
+
+        # Establecer la imagen
+        self.label_image.setPixmap(QtGui.QPixmap("../App/images/encriptar _ desencriptar UTXJ sIU.png"))
 
 if __name__ == "__main__":
     import sys
