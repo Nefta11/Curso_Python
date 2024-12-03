@@ -43,15 +43,6 @@ class Ui_FormMenu(object):
         self.statusbar = QtWidgets.QStatusBar(FormMenu)
         self.statusbar.setObjectName("statusbar")
         FormMenu.setStatusBar(self.statusbar)
-        self.actionEncrypt = QtWidgets.QAction(FormMenu)
-        self.actionEncrypt.setObjectName("actionEncrypt")
-        self.actionDecrypt = QtWidgets.QAction(FormMenu)
-        self.actionDecrypt.setObjectName("actionDecrypt")
-        self.actionExit = QtWidgets.QAction(FormMenu)
-        self.actionExit.setObjectName("actionExit")
-        self.menuEncryptFile.addAction(self.actionEncrypt)
-        self.menuDecrypt.addAction(self.actionDecrypt)
-        self.menuExit.addAction(self.actionExit)
         self.menubar.addAction(self.menuEncryptFile.menuAction())
         self.menubar.addAction(self.menuDecrypt.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
@@ -69,9 +60,6 @@ class Ui_FormMenu(object):
         self.menuDecrypt.setTitle(_translate("FormMenu", "Desencriptar"))
         self.menuHelp.setTitle(_translate("FormMenu", "Ayuda"))
         self.menuExit.setTitle(_translate("FormMenu", "Salir"))
-        self.actionEncrypt.setText(_translate("FormMenu", "Encriptar"))
-        self.actionDecrypt.setText(_translate("FormMenu", "Desencriptar"))
-        self.actionExit.setText(_translate("FormMenu", "Salir"))
 
 if __name__ == "__main__":
     import sys
