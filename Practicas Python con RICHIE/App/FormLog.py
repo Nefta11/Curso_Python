@@ -9,65 +9,80 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(507, 553)
-        self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(100, 250, 61, 41))
+class Ui_Dialog(object):  # Asegúrate de que el nombre de la clase sea Ui_Dialog
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(628, 669)
+        self.label = QtWidgets.QLabel(MainWindow)
+        self.label.setGeometry(QtCore.QRect(100, 250, 91, 41))
+        font = QtGui.QFont()
+        font.setFamily("8514oem")
+        self.label.setFont(font)
         self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(160, 20, 181, 41))
+        self.label_2 = QtWidgets.QLabel(MainWindow)
+        self.label_2.setGeometry(QtCore.QRect(230, 20, 181, 41))
+        font = QtGui.QFont()
+        font.setFamily("8514oem")
+        self.label_2.setFont(font)
         self.label_2.setScaledContents(False)
         self.label_2.setIndent(-1)
         self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setGeometry(QtCore.QRect(90, 320, 81, 41))
+        self.label_3 = QtWidgets.QLabel(MainWindow)
+        self.label_3.setGeometry(QtCore.QRect(90, 320, 131, 41))
+        font = QtGui.QFont()
+        font.setFamily("8514oem")
+        self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
-        self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setGeometry(QtCore.QRect(190, 420, 93, 28))
+        self.pushButton = QtWidgets.QPushButton(MainWindow)
+        self.pushButton.setGeometry(QtCore.QRect(80, 400, 191, 51))
+        font = QtGui.QFont()
+        font.setFamily("8514oem")
+        self.pushButton.setFont(font)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("images/siu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setAutoRepeatDelay(303)
         self.pushButton.setObjectName("pushButton")
-        self.label_4 = QtWidgets.QLabel(Dialog)
-        self.label_4.setGeometry(QtCore.QRect(70, 60, 371, 161))
+        self.label_4 = QtWidgets.QLabel(MainWindow)
+        self.label_4.setGeometry(QtCore.QRect(60, 60, 501, 191))
         self.label_4.setText("")
         self.label_4.setPixmap(QtGui.QPixmap("images/welcome.png"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
-        self.pushButton_2 = QtWidgets.QPushButton(Dialog)
-        self.pushButton_2.setGeometry(QtCore.QRect(320, 420, 93, 28))
+        self.pushButton_2 = QtWidgets.QPushButton(MainWindow)
+        self.pushButton_2.setGeometry(QtCore.QRect(280, 400, 161, 51))
+        font = QtGui.QFont()
+        font.setFamily("8514oem")
+        self.pushButton_2.setFont(font)
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("images/no.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_2.setIcon(icon1)
         self.pushButton_2.setAutoRepeatDelay(303)
         self.pushButton_2.setObjectName("pushButton_2")
-        self.txtUser = QtWidgets.QLineEdit(Dialog)  # Cambiado a txtUser
-        self.txtUser.setGeometry(QtCore.QRect(180, 260, 151, 31))
-        self.txtUser.setObjectName("txtUser")
-        self.txtPassword = QtWidgets.QLineEdit(Dialog)  # Cambiado a txtPassword
-        self.txtPassword.setGeometry(QtCore.QRect(180, 330, 151, 31))
-        self.txtPassword.setObjectName("txtPassword")
+        self.txtUser = QtWidgets.QLineEdit(MainWindow)  # Cambia el nombre aquí
+        self.txtUser.setGeometry(QtCore.QRect(230, 260, 151, 31))
+        self.txtUser.setObjectName("txtUser")  # Cambia el nombre aquí
+        self.txtPassword = QtWidgets.QLineEdit(MainWindow)  # Cambia el nombre aquí
+        self.txtPassword.setGeometry(QtCore.QRect(230, 320, 151, 31))
+        self.txtPassword.setObjectName("txtPassword")  # Cambia el nombre aquí
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "Usuario:"))
-        self.label_2.setText(_translate("Dialog", "Bienvenido al sistema Siuu"))
-        self.label_3.setText(_translate("Dialog", "Contraseña:"))
-        self.pushButton.setText(_translate("Dialog", "Iniciar Sesión"))
-        self.pushButton_2.setText(_translate("Dialog", "Cancelar"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Dialog"))
+        self.label.setText(_translate("MainWindow", "Usuario:"))
+        self.label_2.setText(_translate("MainWindow", "¡ Holiwiwiriski !"))
+        self.label_3.setText(_translate("MainWindow", "Contraseña:"))
+        self.pushButton.setText(_translate("MainWindow", "Inicias Sesion"))
+        self.pushButton_2.setText(_translate("MainWindow", "Cancelar"))
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    MainWindow = QtWidgets.QDialog()
+    ui = Ui_Dialog()  # Asegúrate de que el nombre de la clase sea Ui_Dialog
+    ui.setupUi(MainWindow)
+    MainWindow.show()
     sys.exit(app.exec_())

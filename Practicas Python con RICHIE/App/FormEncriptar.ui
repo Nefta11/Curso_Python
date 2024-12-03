@@ -1,76 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SistemaEncriptar</class>
- <widget class="QMainWindow" name="SistemaEncriptar">
+ <class>FrmEncriptar</class>
+ <widget class="QMainWindow" name="FrmEncriptar">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>726</height>
+    <width>804</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>781</width>
-      <height>631</height>
+      <x>20</x>
+      <y>70</y>
+      <width>751</width>
+      <height>491</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideMiddle</enum>
     </property>
     <widget class="QWidget" name="tab">
-     <attribute name="icon">
-      <iconset>
-       <normalon>../../../Encriptarqt/Encriptarqt/icon-256x256.png</normalon>
-      </iconset>
-     </attribute>
      <attribute name="title">
-      <string>Encriptar texto</string>
+      <string>Encriptar Texto</string>
      </attribute>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="lblTextoencriptado">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>0</y>
-        <width>121</width>
-        <height>31</height>
+        <y>250</y>
+        <width>201</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <family>8514oem</family>
+        <pointsize>8</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Mensaje:</string>
+       <string>Texto Encriptado:</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="Encriptar_6">
+     <widget class="QLabel" name="lblMensajeEncriptado">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>50</y>
-        <width>151</width>
+        <x>10</x>
+        <y>270</y>
+        <width>531</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="txtMensaje">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>531</width>
+        <height>191</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblTextoPlano">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>8514oem</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Texto Plano:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnEncriptar">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>42</y>
+        <width>131</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <family>8514oem</family>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
@@ -81,71 +125,18 @@
         <normaloff>images/candado.png</normaloff>images/candado.png</iconset>
       </property>
      </widget>
-     <widget class="QPushButton" name="Encriptar_3">
+     <widget class="QPushButton" name="btnLimpiar">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>130</y>
-        <width>151</width>
+        <x>580</x>
+        <y>92</y>
+        <width>131</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Cargar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>images/cargar.png</normaloff>images/cargar.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_4">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>170</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Descargar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>images/descargar.png</normaloff>images/descargar.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_5">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>90</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <family>8514oem</family>
        </font>
       </property>
       <property name="text">
@@ -156,233 +147,55 @@
         <normaloff>images/clean.png</normaloff>images/clean.png</iconset>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QPushButton" name="btnCargar">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>400</y>
-        <width>241</width>
+        <x>580</x>
+        <y>142</y>
+        <width>131</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <family>8514oem</family>
        </font>
       </property>
       <property name="text">
-       <string>Mensaje Encriptado:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="mensajeEncriptado">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>440</y>
-        <width>431</width>
-        <height>131</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_7">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>210</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Enviar</string>
+       <string>Cargar</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>images/enviar.png</normaloff>images/enviar.png</iconset>
+        <normaloff>images/cargar.png</normaloff>images/cargar.png</iconset>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QPushButton" name="btnDescargar">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>581</width>
-        <height>361</height>
+        <x>580</x>
+        <y>190</y>
+        <width>131</width>
+        <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>8514oem</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Descargar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/descargar.png</normaloff>images/descargar.png</iconset>
       </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Encriptar Imagenes</string>
+      <string>Encriptar Imagen</string>
      </attribute>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>10</y>
-        <width>111</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Imagen:</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_8">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>80</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Desencriptar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>images/desencriptar.png</normaloff>images/desencriptar.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_9">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>120</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Limpiar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>images/clean.png</normaloff>images/clean.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_10">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>160</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Cargar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>images/cargar.png</normaloff>images/cargar.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_11">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>200</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Descargar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>images/descargar.png</normaloff>images/descargar.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Encriptar_12">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>240</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bodoni MT Black</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Enviar</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>images/enviar.png</normaloff>images/enviar.png</iconset>
-      </property>
-     </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>581</width>
-        <height>501</height>
-       </rect>
-      </property>
-     </widget>
     </widget>
    </widget>
   </widget>
@@ -391,7 +204,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>804</width>
      <height>26</height>
     </rect>
    </property>
