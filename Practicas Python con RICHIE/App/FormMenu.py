@@ -21,13 +21,13 @@ class Ui_FormMenu(object):
 
         # Añadir espacio para la imagen
         self.label_image = QtWidgets.QLabel(self.centralwidget)
-        self.label_image.setGeometry(QtCore.QRect(200, 110, 400, 200))
+        self.label_image.setGeometry(QtCore.QRect(100, 110, 600, 300))  # Aumentar el tamaño del QLabel
         self.label_image.setAlignment(QtCore.Qt.AlignCenter)
         self.label_image.setObjectName("label_image")
 
         # Añadir etiqueta de pregunta
         self.label_question = QtWidgets.QLabel(self.centralwidget)
-        self.label_question.setGeometry(QtCore.QRect(200, 320, 400, 50))
+        self.label_question.setGeometry(QtCore.QRect(200, 420, 400, 50))  # Ajustar la posición de la pregunta
         font.setPointSize(16)
         self.label_question.setFont(font)
         self.label_question.setAlignment(QtCore.Qt.AlignCenter)
