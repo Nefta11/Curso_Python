@@ -9,7 +9,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_Dialog(object):  # Asegúrate de que el nombre de la clase sea Ui_Dialog
+class Ui_Dialog(object):  
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(628, 669)
@@ -59,12 +59,12 @@ class Ui_Dialog(object):  # Asegúrate de que el nombre de la clase sea Ui_Dialo
         self.pushButton_2.setIcon(icon1)
         self.pushButton_2.setAutoRepeatDelay(303)
         self.pushButton_2.setObjectName("pushButton_2")
-        self.txtUser = QtWidgets.QLineEdit(MainWindow)  # Cambia el nombre aquí
+        self.txtUser = QtWidgets.QLineEdit(MainWindow)  
         self.txtUser.setGeometry(QtCore.QRect(230, 260, 151, 31))
-        self.txtUser.setObjectName("txtUser")  # Cambia el nombre aquí
-        self.txtPassword = QtWidgets.QLineEdit(MainWindow)  # Cambia el nombre aquí
+        self.txtUser.setObjectName("txtUser")  
+        self.txtPassword = QtWidgets.QLineEdit(MainWindow) 
         self.txtPassword.setGeometry(QtCore.QRect(230, 320, 151, 31))
-        self.txtPassword.setObjectName("txtPassword")  # Cambia el nombre aquí
+        self.txtPassword.setObjectName("txtPassword")  
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QDialog()
-    ui = Ui_Dialog()  # Asegúrate de que el nombre de la clase sea Ui_Dialog
+    ui = Ui_Dialog()  
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
