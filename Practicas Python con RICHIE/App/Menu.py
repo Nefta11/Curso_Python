@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
 from FormMenu import Ui_FormMenu
 from Encriptar import Encriptar
+from Desencriptar import Desencriptar
 from PyQt5.QtWidgets import QMessageBox
 
 class Menu(QtWidgets.QMainWindow, Ui_FormMenu):
@@ -10,10 +11,15 @@ class Menu(QtWidgets.QMainWindow, Ui_FormMenu):
         self.parent = parent
 
         self.menuEncryptFile.addAction("Encriptar Archivo", self.openencriptar)
+        self.menuDecrypt.addAction("Desencriptar Archivo", self.opendesencriptar)
         self.menuExit.addAction("Salir", self.salir)
 
     def openencriptar(self):
         opennewwindow = Encriptar(self)
+        opennewwindow.show()
+
+    def opendesencriptar(self):
+        opennewwindow = Desencriptar(self)
         opennewwindow.show()
 
     def salir(self):
@@ -30,3 +36,10 @@ class Menu(QtWidgets.QMainWindow, Ui_FormMenu):
     def ocultar(self):
         if self.parent:
             self.parent.show()
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    FormMenu = Menu()
+    FormMenu.show()
+    sys.exit(app.exec_())
