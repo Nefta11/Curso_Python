@@ -35,24 +35,23 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
         try:
             # Intentar decodificar como texto
             texto_desencriptado = mensaje_desencriptado.decode('utf-8')
-            self.textEdit.setText(texto_desencriptado)
+            self.textEditDesencriptado.setText(texto_desencriptado)
             self.image_data = None  # No es una imagen
-            self.label.clear()  # Limpiar la imagen si es texto
         except UnicodeDecodeError:
             # Si falla, asumir que es una imagen
-            self.textEdit.clear()
+            self.textEditDesencriptado.clear()
             self.image_data = mensaje_desencriptado
             with open("imagen_desencriptada.jpg", 'wb') as image_file:
                 image_file.write(mensaje_desencriptado)
             self.mostrar_imagen("imagen_desencriptada.jpg")
    
     def mostrar_imagen(self, image_path):
-        cursor = self.textEdit.textCursor()
+        cursor = self.textEditDesencriptado.textCursor()
         cursor.insertImage(image_path)
     
     def limpiar(self):
         self.textEdit.clear()
-        self.label.clear()
+        self.textEditDesencriptado.clear()
         self.image_data = None
     
     def crearFichero(self):
@@ -66,7 +65,7 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
             QMessageBox.about(self, "Archivo", "Imagen guardada correctamente")
         else:
             # Guardar texto desencriptado
-            cadena = self.textEdit.toPlainText()
+            cadena = self.textEditDesencriptado.toPlainText()
             if cadena != "":
                 fecha = datetime.now()
                 d = fecha.strftime("%m-%d-%Y%H-%M-%S")
@@ -101,7 +100,7 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
         message['To'] = receiver_email_address
 
         # Set email body text
-        message.set_content(self.textEdit.toPlainText())
+        message.set_content(self.textEditDesencriptado.toPlainText())
 
         # Set smtp server and port
         server = smtplib.SMTP(email_smtp, '587')

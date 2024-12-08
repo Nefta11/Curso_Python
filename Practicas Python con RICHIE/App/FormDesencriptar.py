@@ -74,6 +74,9 @@ class Ui_SistemaDesencriptar(object):
         icon3.addPixmap(QtGui.QPixmap("images/desencriptar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Encriptar_6.setIcon(icon3)
         self.Encriptar_6.setObjectName("Encriptar_6")
+        self.textEditDesencriptado = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEditDesencriptado.setGeometry(QtCore.QRect(20, 470, 571, 151))
+        self.textEditDesencriptado.setObjectName("textEditDesencriptado")
         SistemaDesencriptar.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(SistemaDesencriptar)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 811, 26))
@@ -92,7 +95,7 @@ class Ui_SistemaDesencriptar(object):
         self.Desencriptar_3.setText(_translate("SistemaDesencriptar", "Cargar Archivo"))
         self.Desencriptar_4.setText(_translate("SistemaDesencriptar", "Guardar Archivo"))
         self.label.setText(_translate("SistemaDesencriptar", "Mensaje:"))
-        self.label_2.setText(_translate("SistemaDesencriptar", "Mensaje Encriptado:"))
+        self.label_2.setText(_translate("SistemaDesencriptar", "Mensaje Desencriptado:"))
         self.Desencriptar_5.setText(_translate("SistemaDesencriptar", "Limpiar"))
         self.Encriptar_6.setText(_translate("SistemaDesencriptar", "Desencriptar"))
 
