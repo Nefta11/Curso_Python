@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
 from FormLog import Ui_Dialog
 from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtWidgets import QLineEdit
 
 class MainWindow(QtWidgets.QMainWindow, Ui_Dialog):
     def __init__(self, *args, **kwargs):
@@ -10,6 +11,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Dialog):
         self.pushButton.clicked.connect(self.validar)
         self.pushButton_2.clicked.connect(self.salir)
         self.menu_window = None  # Añadir una referencia para la ventana del menú
+
+        # Configurar el campo de contraseña para que no se vea mientras se teclea
+        self.txtPassword.setEchoMode(QLineEdit.Password)
 
     def validar(self):
         usuario = self.txtUser.text()
@@ -23,19 +27,30 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Dialog):
             returnValue = msgBox.exec()
             if returnValue == QMessageBox.Ok:
                 self.openwindow()
-                self.close()  # Cambiar self.hide() por self.close()
+                self.close()  
             else:
                 self.close()
         else:
-            QMessageBox.about(self, "Error", "Usuario o contraseña incorrectos")
-            QMessageBox.setIcon(QMessageBox.Critical)
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Critical)
+            msgBox.setText("Error usuario o contraseña incorrectos")
+            msgBox.setWindowTitle("Error")
+            msgBox.setStandardButtons(QMessageBox.Ok)
+            returnValue = msgBox.exec()
 
     def salir(self):
-        self.close()
+        msgBox = QMessageBox()
+        msgBox.setIcon(QMessageBox.Critical)
+        msgBox.setText("Deseas salir de la aplicación")
+        msgBox.setWindowTitle("Cancelar")
+        msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        returnValue = msgBox.exec()
+        if returnValue == QMessageBox.Ok:
+            self.close()
 
     def openwindow(self):
         from Menu import Menu  
-        self.menu_window = Menu(self)  # Mantener una referencia a la ventana del menú
+        self.menu_window = Menu(self) 
         self.menu_window.show()
 
 if __name__ == "__main__":
