@@ -1,7 +1,6 @@
 from PyQt5 import QtWidgets
 from FormLog import Ui_Dialog
-from PyQt5.QtWidgets import QMessageBox
-from PyQt5.QtWidgets import QLineEdit
+from PyQt5.QtWidgets import QMessageBox, QLineEdit
 
 class MainWindow(QtWidgets.QMainWindow, Ui_Dialog):
     def __init__(self, *args, **kwargs):

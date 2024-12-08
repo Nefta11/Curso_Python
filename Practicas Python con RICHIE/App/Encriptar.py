@@ -1,23 +1,23 @@
-from FormDesencriptar import *
+from FormEncriptar import Ui_FrmEncriptar
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from PyQt5.QtWidgets import QMessageBox, QFileDialog
+from PyQt5.QtWidgets import QMessageBox, QFileDialog, QMainWindow, QApplication
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding
 from datetime import datetime
 import smtplib
 from email.message import EmailMessage
 
-class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
+class Encriptar(QMainWindow, Ui_FrmEncriptar):
     def __init__(self, *args, **kwargs):
-        QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
+        super(Encriptar, self).__init__(*args, **kwargs)
         self.setupUi(self)
-        self.Encriptar_6.clicked.connect(self.encrypt_data_AES)
-        self.Desencriptar_5.clicked.connect(self.limpiar)
-        self.Desencriptar_4.clicked.connect(self.crearFichero)
-        self.Desencriptar_3.clicked.connect(self.uploadFichero)
+        self.btnEncriptar.clicked.connect(self.encrypt_data_AES)
+        self.btnLimpiar.clicked.connect(self.limpiar)
+        self.btnCargar.clicked.connect(self.uploadFichero)
+        self.btnDescargar.clicked.connect(self.crearFichero)
     
     def encrypt_data_AES(self):
-        data = self.textEdit.toPlainText()
+        data = self.txtMensaje.toPlainText()
         key = b"123456789101112131415161718_UTXJ"
         iv = b"TI_UTXJ2024ENCRI"
         padder = padding.PKCS7(128).padder()
@@ -26,14 +26,14 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
         cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
         encryptor = cipher.encryptor()
         ciphertext = encryptor.update(padded_data) + encryptor.finalize()
-        self.label_2.setText(f'{ciphertext}')
+        self.lblMensajeEncriptado.setText(f'{ciphertext}')
     
     def limpiar(self):
-        self.textEdit.clear()
-        self.label_2.clear()
+        self.txtMensaje.clear()
+        self.lblMensajeEncriptado.clear()
     
     def crearFichero(self):
-        cadena = self.label_2.text()
+        cadena = self.lblMensajeEncriptado.text()
         if cadena != "":
             fecha = datetime.now()
             d = fecha.strftime("%m-%d-%Y%H-%M-%S")
@@ -50,12 +50,12 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
         if fileName:
             with open(fileName, 'r') as fichero:
                 mensaje = fichero.read()
-            self.textEdit.setText(mensaje)
+            self.txtMensaje.setText(mensaje)
     
-    def eviarCorreo(self):
+    def enviarCorreo(self):
         email_subject = "Datos encriptados"
         sender_email_address = "neftaliarturohernandez@gmail.com"
-        receiver_email_address = "220100a@utxicotepec.edu.mx\Ó"
+        receiver_email_address = "220100a@utxicotepec.edu.mx"
         email_smtp = "smtp.gmail.com"
         email_password = "7641146446"
 
@@ -68,7 +68,7 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
         message['To'] = receiver_email_address
 
         # Set email body text
-        message.set_content(self.label_2.text())
+        message.set_content(self.lblMensajeEncriptado.text())
 
         # Set smtp server and port
         server = smtplib.SMTP(email_smtp, '587')
@@ -90,9 +90,9 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
 
 if __name__ == "__main__":
     import sys
-    app = QtWidgets.QApplication(sys.argv)
-    SistemaDesencriptar = QtWidgets.QMainWindow()
-    ui = Desencriptar()
-    ui.setupUi(SistemaDesencriptar)
-    SistemaDesencriptar.show()
+    app = QApplication(sys.argv)
+    FrmEncriptar = QMainWindow()
+    ui = Encriptar()
+    ui.setupUi(FrmEncriptar)
+    FrmEncriptar.show()
     sys.exit(app.exec_())
