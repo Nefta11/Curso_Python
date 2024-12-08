@@ -37,16 +37,19 @@ class Desencriptar(QtWidgets.QMainWindow, Ui_SistemaDesencriptar):
             texto_desencriptado = mensaje_desencriptado.decode('utf-8')
             self.textEdit.setText(texto_desencriptado)
             self.image_data = None  # No es una imagen
+            self.label.clear()  # Limpiar la imagen si es texto
         except UnicodeDecodeError:
             # Si falla, asumir que es una imagen
             self.textEdit.clear()
-            self.label.setPixmap(QtGui.QPixmap())
-            self.label.setText("Imagen desencriptada")
             self.image_data = mensaje_desencriptado
             with open("imagen_desencriptada.jpg", 'wb') as image_file:
                 image_file.write(mensaje_desencriptado)
-            self.label.setPixmap(QtGui.QPixmap("imagen_desencriptada.jpg"))
+            self.mostrar_imagen("imagen_desencriptada.jpg")
    
+    def mostrar_imagen(self, image_path):
+        cursor = self.textEdit.textCursor()
+        cursor.insertImage(image_path)
+    
     def limpiar(self):
         self.textEdit.clear()
         self.label.clear()
