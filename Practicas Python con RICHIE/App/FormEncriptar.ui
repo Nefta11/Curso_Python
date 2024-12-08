@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideMiddle</enum>
@@ -196,6 +196,136 @@
      <attribute name="title">
       <string>Encriptar Imagen</string>
      </attribute>
+     <widget class="QLabel" name="lblTextoPlano_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>8514oem</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Imagen</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDescargar_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>180</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>8514oem</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Descargar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/descargar.png</normaloff>images/descargar.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnEncriptar_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>32</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>8514oem</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Encriptar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/candado.png</normaloff>images/candado.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnLimpiar_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>82</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>8514oem</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/clean.png</normaloff>images/clean.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnCargar_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>132</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>8514oem</family>
+       </font>
+      </property>
+      <property name="text">
+       <string>Cargar</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/cargar.png</normaloff>images/cargar.png</iconset>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>431</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../../../.designer/backup/picture.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -205,7 +335,7 @@
      <x>0</x>
      <y>0</y>
      <width>804</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
